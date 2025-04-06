@@ -505,8 +505,8 @@
     position: absolute;
     bottom: -100px;
     left: -100px;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     z-index: 0;
@@ -1109,22 +1109,22 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-        // Get the map placeholder element
+
         const mapPlaceholder = document.querySelector('.map-placeholder');
         
-        // Add click event listener
+
         if (mapPlaceholder) {
             mapPlaceholder.addEventListener('click', function() {
-                // Replace this URL with your desired map location
+
                 const mapUrl = 'https://maps.app.goo.gl/TpUuSiSSsGzcDqVY9';
                 
-                // Open the map URL in a new tab
+
                 window.open(mapUrl, '_blank');
             });
         }
     });
 
-        // Smooth scrolling for anchor links
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1141,27 +1141,8 @@
             });
         });
         
-        // Form submission
-        document.getElementById('inquiry-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-            
-            // In a real implementation, you would send this data to a server
-            console.log('Form submitted:', { name, email, phone, message });
-            
-            // Show success message
-            alert('Thank you for your interest! We will contact you shortly.');
-            
-            // Reset form
-            this.reset();
-        });
         
-        // Add animation effects on scroll
+
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1176,7 +1157,7 @@
             });
         }, observerOptions);
         
-        // Observe all section headings and feature cards
+
         document.querySelectorAll('section h2, .feature-card, .topper-card, .gallery-item, .faculty-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
@@ -1184,7 +1165,7 @@
             observer.observe(el);
         });
         
-        // Fade in animation class
+
         document.head.insertAdjacentHTML('beforeend', `
             <style>
                 .fade-in {
@@ -1194,7 +1175,7 @@
             </style>
         `);
         
-        // Dynamic header on scroll
+
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             
